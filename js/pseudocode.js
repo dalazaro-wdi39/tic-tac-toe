@@ -105,4 +105,8 @@ $(document).ready(function() {
       });
           //Reload page when player hits reset button
 
+  //Matthew's shiny reset button!
+  $('.box').removeClass("X");
+  $('.box').removeClass("O");
+  $('.box > span').html("");
 });

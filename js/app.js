@@ -4,8 +4,8 @@ $(document).ready(function() {
     // all code to manipulate the DOM
     // goes inside this function
 
-    //initialize moves counter to 0
-    let moves = 0;
+    // initialize moves counter to 0
+    // let moves = 0;
 
     //X goes first
     let whoseTurn = "X";
@@ -21,9 +21,40 @@ $(document).ready(function() {
 
     //when a box is clicked, it returns an X or O to the chosen box based on whose turn it is
     $('.box').click(function(){
-      $(this).html('<span class="marker">'+whoseTurn+'</span>');
+    //check to see if the box is empty
+      if ( $(this).hasClass("X") || $(this).hasClass("O") ) {
+        return;
+      }
+
+      $(this).html('<span>'+whoseTurn+'</span>');
+    //marks the box as belonging to the player
+      $(this).addClass(whoseTurn);
+    //next player's turn
       changeTurn();
+
+    //detect a winning condition
+      win();
+
+    //add one to the move counter
+      // moves += 1;
+
+      // if (moves === 9) {
+        // alert("Cat's game!");
+      // }
+
     });
+
+      //Reset
+      //when the reset button is clicked, change board to initial configuration
+      //board cleared
+      //turnNumber is back to 0
+          $('#reset').click(function() {
+              $('.box').removeClass("X");
+              $('.box').removeClass("O");
+              $('.box').html("");
+          });
+
+
 
 
 
