@@ -1,6 +1,6 @@
-* {
+/** {
   border: 1px dashed black;
-}
+}*/
 
 #board {
   margin-top: 10px;
@@ -9,8 +9,14 @@
 .box {
   border: 1px solid black;
   height: 150px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
 }
 
-.marker {
-  margin: 0 auto;
+#reset {
+  margin-top: 20px;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 700;
 }
