@@ -4,6 +4,8 @@ $(document).ready(function() {
     // all code to manipulate the DOM
     // goes inside this function
 
+    arr = [["","",""],["","",""],["","",""]];
+
     // initialize moves counter to 0
     // let moves = 0;
 
@@ -52,6 +54,7 @@ $(document).ready(function() {
               $('.box').removeClass("X");
               $('.box').removeClass("O");
               $('.box').html("");
+              whoseTurn = "X";
           });
 
 
